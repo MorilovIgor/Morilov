@@ -37,10 +37,12 @@ public class Treugolnik {
 
                 return s;
             } else {
+
                 System.out.println("Введены некорректные данные!");
                 return "Введены некорректные данные!";
             }
         } else {
+
             System.out.println("Введены некорректные данные!");
             return "Введены некорректные данные!";
         }
