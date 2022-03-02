@@ -42,11 +42,11 @@ public class AuthorizationRiaRu extends BaseTest {
 
         driver.get("https://mail.ru");
 
-        driver.findElement(By.cssSelector(".email-input")).sendKeys(getLog());
-        driver.findElement(By.cssSelector("[data-testid='enter-password']")).click();
-        Thread.sleep(500);
-        driver.findElement(By.cssSelector(".password-input")).sendKeys(getPwd());
-        driver.findElement(By.cssSelector("[data-testid='login-to-mail']")).click();
+        driver.findElement(By.xpath("(//button[text()='Войти'])[2]")).click();
+        driver.findElement(By.name("username")).sendKeys(getLog());
+        driver.findElement(By.xpath("//span[text()='Ввести пароль']/..")).click();
+        driver.findElement(By.name("password")).sendKeys(getPwd());
+        driver.findElement(By.xpath("//span[text()='Войти']/..")).click();
 
         Thread.sleep(2000);
         driver.findElement(By.xpath("//span[@title='РИА Новости <robot@rian.ru>']/../../../..")).click();
